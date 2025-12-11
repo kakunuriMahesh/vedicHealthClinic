@@ -83,8 +83,32 @@
   }
 
   .departments-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
+  }
+
+  .department-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .department-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .department-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .department-title {
+    font-size: 1.375rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .departments-grid {
+    grid-template-columns: 1fr;
   }
 
   .department-card {
@@ -94,6 +118,11 @@
   .department-icon {
     width: 60px;
     height: 60px;
+  }
+
+  .department-icon svg {
+    width: 28px;
+    height: 28px;
   }
 
   .department-title {

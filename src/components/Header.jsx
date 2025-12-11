@@ -9,6 +9,11 @@ const Header = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const location = useLocation();
 
+  // Scroll to top instantly when route changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -48,16 +53,22 @@ const Header = () => {
   }, [isMenuOpen]);
 
   const navItems = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Health Checkup", href: "/health-checkup" },
-    { name: "Doctors", href: "/doctors" },
-    { name: "Departments", href: "/departments" },
+    { name: "About", href: "#about", scroll: true },
+    { name: "Service", href: "#services", scroll: true },
+    { name: "Qualification", href: "#qualification", scroll: true },
+    { name: "Testimonial", href: "#testimonials", scroll: true },
+    { name: "Contact", href: "#contact", scroll: true },
   ];
 
-  const handleNavClick = () => {
+  const handleNavClick = (href, scroll, e) => {
     setIsMenuOpen(false);
+    if (scroll && href.startsWith('#')) {
+      e?.preventDefault();
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   };
 
   const toggleMobileMenu = (e) => {
@@ -103,7 +114,7 @@ const Header = () => {
         <div className="">
           <div className="header-content">
             {/* Top bar */}
-            <div className="header-top">
+            {/* <div className="header-top">
               <div className="header-info">
                 <span>90919 Madie Run Apt. 790</span>
                 <span>hello@yoursite.com</span>
@@ -113,17 +124,20 @@ const Header = () => {
                   Connect on Whatsapp
                 </a>
               </div>
-            </div>
+            </div> */}
 
             {/* Main navigation */}
             <nav className="header-main">
-              <div className="logo">
-                <img
-                  src="/assets/img/LOGO.png"
-                  alt="VHC (Vedic Health Clinic)"
-                  style={{ height: "55px" }}
-                />
-              </div>
+              <Link to="/" className="logo" onClick={() => setIsMenuOpen(false)}>
+                <div className="logo-icon">
+                  <span>DR</span>
+                </div>
+                <div className="logo-text">
+                  <span className="logo-name">Dr. Priya</span>
+                  <span className="logo-surname">Ramachandran</span>
+                  <span className="logo-title">General Physician, Chennai</span>
+                </div>
+              </Link>
 
 
               <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
@@ -140,29 +154,42 @@ const Header = () => {
                   </li>
                   {navItems.map((item) => (
                     <li key={item.name}>
-                      <Link
-                        to={item.href}
-                        className={`nav-link ${
-                          location.pathname === item.href ? "active" : ""
-                        }`}
-                        onClick={handleNavClick}
-                      >
-                        {item.name}
-                      </Link>
+                      {item.scroll ? (
+                        <a
+                          href={item.href}
+                          className="nav-link"
+                          onClick={(e) => handleNavClick(item.href, true, e)}
+                        >
+                          {item.name}
+                        </a>
+                      ) : (
+                        <Link
+                          to={item.href}
+                          className={`nav-link ${
+                            location.pathname === item.href ? "active" : ""
+                          }`}
+                          onClick={() => handleNavClick()}
+                        >
+                          {item.name}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>
                 <div className="header-cta">
-                  {/* <div className="phone-info">
-                <Phone size={20} />
-                <span>1800-657-876</span>
-              </div>
-              <button 
-                className="btn btn-primary appointment-btn"
-                onClick={(e) => handleNavClick('#contact', e)}
-              >
-                Appointment
-              </button> */}
+                  <button 
+                    className="btn btn-primary appointment-btn"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const element = document.querySelector('#contact');
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
+                  >
+                    <Phone size={18} />
+                    Book Now
+                  </button>
                   <button
                     className="theme-toggle"
                     onClick={toggleTheme}

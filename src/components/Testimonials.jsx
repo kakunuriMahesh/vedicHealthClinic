@@ -6,30 +6,23 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: 'Mr. Williams',
-      condition: 'Diabetes Patient',
-      text: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy.',
+      name: 'Rajesh Kumar',
+      location: 'T. Nagar, Chennai',
+      text: 'Dr. Priya has been managing my diabetes for 3 years now. Her personalized care and regular follow-ups have helped me maintain excellent blood sugar levels. She takes time to explain everything in Tamil, which I appreciate.',
       rating: 5
     },
     {
       id: 2,
-      name: 'Mrs. Johnson',
-      condition: 'Cardiology Patient',
-      text: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy.',
+      name: 'Lakshmi Sundaram',
+      location: 'Adyar, Chennai',
+      text: 'Very compassionate and knowledgeable doctor. She diagnosed my thyroid condition when other doctors missed it. Her treatment plan worked perfectly and I\'m feeling much better now.',
       rating: 5
     },
     {
       id: 3,
-      name: 'Dr. Smith',
-      condition: 'General Health',
-      text: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy.',
-      rating: 5
-    },
-    {
-      id: 4,
-      name: 'Ms. Davis',
-      condition: 'Pediatric Care',
-      text: 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy.',
+      name: 'Venkatesh Iyer',
+      location: 'Velachery, Chennai',
+      text: 'Dr. Priya treats our entire family. She\'s excellent with children and elderly parents alike. Always available for emergencies and provides thorough consultation.',
       rating: 5
     }
   ]
@@ -39,21 +32,21 @@ const Testimonials = () => {
       <div className="container">
         <div className="testimonials-content">
           <div className="testimonials-header">
-            <h2 className="section-title">What Our Patients Say</h2>
-            <p className="section-subtitle">Real experiences from our valued patients</p>
+            <h2 className="section-title">Patient Testimonials</h2>
+            <p className="section-subtitle">Hear what our patients have to say about their experience</p>
           </div>
 
           <div className="testimonials-grid">
             {testimonials.map((testimonial) => (
               <div key={testimonial.id} className="testimonial-card">
-                <div className="testimonial-quote">
-                  <Quote size={32} />
-                </div>
-                
                 <div className="testimonial-rating">
                   {[...Array(testimonial.rating)].map((_, index) => (
-                    <Star key={index} size={20} fill="currentColor" />
+                    <Star key={index} size={20} fill="#fbbf24" color="#fbbf24" />
                   ))}
+                </div>
+                
+                <div className="testimonial-quote">
+                  <Quote size={40} />
                 </div>
                 
                 <blockquote className="testimonial-text">
@@ -62,7 +55,7 @@ const Testimonials = () => {
                 
                 <div className="testimonial-author">
                   <h4 className="author-name">{testimonial.name}</h4>
-                  <p className="author-condition">{testimonial.condition}</p>
+                  <p className="author-location">{testimonial.location}</p>
                 </div>
               </div>
             ))}

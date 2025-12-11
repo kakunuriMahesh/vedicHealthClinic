@@ -26,9 +26,8 @@
 
 .doctor-image {
   position: relative;
-  height: 550px;
+  height: 350px;
   overflow: hidden;
-  margin-top: 40px;
 }
 
 .doctor-image img {
@@ -102,15 +101,25 @@
   }
 
   .doctors-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
   }
 
   .doctor-image {
-    height: 200px;
+    height: 250px;
   }
 
   .doctor-content {
     padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .doctors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor-image {
+    height: 200px;
   }
 }

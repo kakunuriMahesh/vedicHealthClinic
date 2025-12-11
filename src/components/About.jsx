@@ -1,5 +1,4 @@
 import React from 'react'
-import { Clock, Award, MapPin } from 'lucide-react'
 import './About.css'
 
 const About = () => {
@@ -17,63 +16,29 @@ const About = () => {
   return (
     <section id="about" className="about">
       <div className="container">
+        <div className="section-header">
+          <h2 className="section-title">About Dr. Priya</h2>
+          <p className="section-subtitle">
+            Dedicated to serving the Chennai community with excellence in medical care
+          </p>
+        </div>
         <div className="about-content">
           <div className="about-text">
-            <h2 className="section-title">About Medpro Healthcare</h2>
-            <p className="section-description">
-              Our medical practice specializes in comprehensive healthcare services with a focus on 
-              patient-centered care. We offer a range of medical specialties and treatments aimed at 
-              improving overall health and well-being for patients of all ages.
+            <p className="about-paragraph">
+              Dr. Priya Ramachandran is a highly respected General Physician with over 15 years of clinical experience. She completed her MBBS from Madras Medical College and pursued her MD in General Medicine from AIIMS, New Delhi.
             </p>
-            
-            <div className="about-stats">
-              <div className="stat-item">
-                <div className="stat-icon">
-                  <Clock size={24} />
-                </div>
-                <div className="stat-content">
-                  <h3>5 to 8 pm</h3>
-                  <p>Timings</p>
-                </div>
-              </div>
-              
-              <div className="stat-item">
-                <div className="stat-icon">
-                  <Award size={24} />
-                </div>
-                <div className="stat-content">
-                  <h3>5 Years +</h3>
-                  <p>Experience</p>
-                </div>
-              </div>
-              
-              <div className="stat-item" onClick={openGoogleMaps}>
-                <div className="stat-icon">
-                  <MapPin size={24} />
-                </div>
-                <div className="stat-content">
-                  <h3>Clinic</h3>
-                  <p>Location</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="about-quote">
-              <p>"Inspiring Health & Enhancing life."</p>
-            </div>
-            
-            <button 
-              className="btn btn-primary"
-              onClick={() => scrollToSection('#contact')}
-            >
-              Book an Appointment
-            </button>
+            <p className="about-paragraph">
+              Known for her compassionate approach and thorough diagnosis, Dr. Priya has become a trusted healthcare provider for families across Chennai. She believes in preventive medicine and educating patients about their health conditions.
+            </p>
+            <p className="about-paragraph">
+              Fluent in Tamil, English, and Hindi, Dr. Priya ensures clear communication with all her patients. She regularly participates in medical camps and community health programs, especially focusing on diabetes and hypertension management.
+            </p>
           </div>
           
           <div className="about-image">
             <img 
-              src="/assets/img/Clinic.png" 
-              alt="Medical Clinic" 
+              src="/assets/img/IMG-20240923-WA0002-removebg-preview.png" 
+              alt="Dr. Priya Ramachandran" 
               className="clinic-image"
             />
           </div>

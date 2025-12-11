@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, Phone, Users } from 'lucide-react'
+import { Phone } from 'lucide-react'
 import './Hero.css'
 
 const Hero = () => {
@@ -22,26 +22,48 @@ const Hero = () => {
           <div className="hero-content">
             <div className="hero-text">
               <div className="hero-badge">
-                <span>Welcome to VHC (Vedic Health Clinic)</span>
+                <span>Trusted Healthcare in Chennai</span>
               </div>
               
               <h1 className="hero-title">
-                The hospital that cares for life and humanity
+                Dr. Priya Ramachandran
               </h1>
+              
+              <p className="hero-qualifications">MBBS, MD (General Medicine)</p>
+              
+              <p className="hero-description">
+                Providing compassionate and comprehensive healthcare services to the people of Chennai for over 15 years. Specialized in preventive care, chronic disease management, and family medicine.
+              </p>
               
               <div className="hero-actions">
                 <button 
                   className="btn btn-primary hero-btn"
-                  onClick={() => scrollToSection('#services')}
+                  onClick={() => scrollToSection('#contact')}
                 >
-                  Discover More
-                  <ArrowRight size={20} />
+                  Book Appointment
                 </button>
                 
-                <div className="hero-phone" onClick={handleWhatsApp}>
-                  <span>FOR APPOINTMENT</span>
+                <button 
+                  className="btn btn-outline hero-btn"
+                  onClick={handleWhatsApp}
+                >
                   <Phone size={20} />
-                  <span>1800-657-876</span>
+                  Call Now
+                </button>
+              </div>
+              
+              <div className="hero-stats">
+                <div className="stat-card">
+                  <div className="stat-number">15+</div>
+                  <div className="stat-label">Years Experience</div>
+                </div>
+                <div className="stat-card">
+                  <div className="stat-number">10,000+</div>
+                  <div className="stat-label">Patients Treated</div>
+                </div>
+                <div className="stat-card">
+                  <div className="stat-number">98%</div>
+                  <div className="stat-label">Patient Satisfaction</div>
                 </div>
               </div>
             </div>
@@ -49,94 +71,18 @@ const Hero = () => {
             <div className="hero-image">
               <img 
                 src="/assets/img/IMG-20240923-WA0002-removebg-preview.png" 
-                alt="Doctor" 
+                alt="Dr. Priya Ramachandran" 
                 className="doctor-image"
               />
-              <div className="hero-badge-card">
-                <div className="badge-icon">
-                  <Users size={24} />
-                </div>
-                <div className="badge-text">
-                  <span className="badge-number">20K+</span>
-                  <span className="badge-label">Patients treated!</span>
-                </div>
+              <div className="availability-card">
+                <div className="availability-title">Available for Consultation</div>
+                <div className="availability-time">Mon - Sat, 9 AM - 8 PM</div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom Section - Dark Teal Background */}
-      <div className="hero-bottom">
-        <div className="container">
-          <div className="hero-mission">
-            <div className="mission-text">
-              <h2 className="mission-title">
-                VHC (Vedic Health Clinic) is<br />
-                dedicated to provide<br />
-                best treatment.
-              </h2>
-            </div>
-            
-            <div className="mission-description">
-              <p>
-                A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.
-              </p>
-            </div>
-          </div>
-          
-          {/* Service cards */}
-          <div className="hero-services">
-            <div className="service-card" style={{height:'365px'}} onClick={() => scrollToSection('#services')}>
-              <div className="service-image">
-                <img src="/assets/img/Clinic.png" alt="Pediatrician" />
-              </div>
-              <div className="service-content">
-                <div className="service-content-inner">
-                  <h4>For your child health</h4>
-                  <p>Pediatrician</p>
-                  <p>
-                    Discover More
-                    <ArrowRight size={16} />
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="service-card" style={{height:'365px'}}  onClick={() => scrollToSection('#services')}>
-              <div className="service-image">
-                <img src="/assets/img/CARD.png" alt="Cardiologist" />
-              </div>
-              <div className="service-content">
-                <div className="service-content-inner">
-                  <h4>For your child health</h4>
-                  <p>Cardiologist</p>
-                  <p>
-                    Discover More
-                    <ArrowRight size={16} />
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="service-card" style={{height:'365px'}}  onClick={() => scrollToSection('#services')}>
-              <div className="service-image">
-                <img src="/assets/img/LOGO.png" alt="Dermatologist" />
-              </div>
-              <div className="service-content">
-                <div className="service-content-inner">
-                  <h4>For your child health</h4>
-                  <p>Dermatologist</p>
-                  <p>
-                    Discover More
-                    <ArrowRight size={16} />
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
   )
 }
