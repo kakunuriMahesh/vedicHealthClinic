@@ -1,6 +1,6 @@
-.hero {
+/* .hero {
   min-height: 100vh;
-}
+} */
 
 /* Top Section - Light Blue Background */
 .hero-top {
@@ -37,7 +37,7 @@
 
 .hero-badge {
   display: inline-block;
-  background: #0ea5e9;
+  background: var(--secondary-purple);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 2rem;
@@ -86,12 +86,12 @@
 
 .hero-btn.btn-outline {
   background: transparent;
-  border: 2px solid #0ea5e9;
-  color: #0ea5e9;
+  border: 2px solid var(--secondary-purple);
+  color: var(--secondary-purple);
 }
 
 .hero-btn.btn-outline:hover {
-  background: #0ea5e9;
+  background: var(--secondary-purple);
   color: white;
 }
 
@@ -151,7 +151,7 @@
 .availability-title {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #0ea5e9;
+  color: var(--primary-purple);
   margin-bottom: 0.25rem;
 }
 
@@ -205,7 +205,7 @@
 .badge-icon {
   width: 40px;
   height: 40px;
-  background: var(--primary-blue);
+  background: var(--secondary-purple);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -230,9 +230,9 @@
   color: var(--text-gray);
 }
 
-/* Bottom Section - Dark Teal Background */
+/* Bottom Section - Dark Purple Background */
 .hero-bottom {
-  background: var(--primary-blue);
+  background: var(--primary-purple);
   padding: 4rem 0;
   color: white;
 }
@@ -283,7 +283,7 @@
 .service-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-xl);
-  border-color: var(--primary-blue);
+  border-color: var(--secondary-purple);
 }
 
 .service-image {
@@ -350,7 +350,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  color: var(--primary-blue);
+  color: var(--secondary-purple);
   font-weight: 600;
   margin-top: 0.75rem;
   font-size: 0.9rem;

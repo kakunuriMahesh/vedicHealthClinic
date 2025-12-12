@@ -22,13 +22,13 @@
 .department-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-xl);
-  border-color: var(--primary-blue);
+  border-color: var(--secondary-purple);
 }
 
 .department-icon {
   width: 80px;
   height: 80px;
-  background: var(--primary-blue);
+  background: var(--secondary-purple);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -71,7 +71,7 @@
 
 .service-item::before {
   content: '•';
-  color: var(--primary-blue);
+  color: var(--secondary-purple);
   font-weight: bold;
   margin-right: 0.5rem;
 }

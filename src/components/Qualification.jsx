@@ -5,6 +5,18 @@ import './Qualification.css'
 const Qualification = () => {
   const education = [
     {
+      degree: 'Advanced Diabetes Management',
+      institution: 'Vedic Health Clinic, Visakhapatnam',
+      years: '2015 - 2016',
+      badge: 'Certification'
+    },
+    {
+      degree: 'Hypertension Control Certification',
+      institution: 'Vedic Health Clinic, Visakhapatnam',
+      years: '2015 - 2016',
+      badge: 'Certification'
+    },
+    {
       degree: 'MD - General Medicine',
       institution: 'All India Institute of Medical Sciences (AIIMS), New Delhi',
       years: '2006 - 2009',
@@ -15,23 +27,23 @@ const Qualification = () => {
       institution: 'Madras Medical College, Chennai',
       years: '2000 - 2005',
       badge: 'First Class with Honors'
-    }
+    },
   ]
 
   const experience = [
     {
-      role: 'Consultant Physician',
-      hospital: 'Apollo Hospitals, Chennai',
+      role: 'General Medicine',
+      hospital: 'Vedic Health Clinic, Visakhapatnam',
       years: '2015 - Present'
     },
     {
-      role: 'Senior Resident',
-      hospital: 'AIIMS, New Delhi',
+      role: 'Diabetes and Hypertension Treatment',
+      hospital: 'Vedic Health Clinic, Visakhapatnam',
       years: '2009 - 2012'
     },
     {
-      role: 'Medical Officer',
-      hospital: 'Government General Hospital, Chennai',
+      role: 'Thyroid, Nutritional Health, and Endocrinology',
+      hospital: 'Vedic Health Clinic, Visakhapatnam',
       years: '2012 - 2015'
     }
   ]

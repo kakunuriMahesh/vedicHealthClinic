@@ -1,7 +1,7 @@
 import React from 'react'
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter } from 'lucide-react'
 import './Footer.css'
-
+import logo from '../../public/assets/img/LOGO_footer.png'
 const Footer = () => {
   const scrollToSection = (sectionId) => {
     const element = document.querySelector(sectionId)
@@ -15,20 +15,19 @@ const Footer = () => {
       <div className="container">
         <div className="footer-top">
           <div className="footer-brand">
-            <div className="footer-logo">DR</div>
+            <img src={logo} alt="Dr. Dasaradha Ram" style={{width: '100px', height: '100px'}} />
             <div>
-              <h3>Dr. Priya</h3>
-              <p className="footer-subtitle">General Physician</p>
+              <h3>Vedic Health Clinic</h3>
             </div>
             <p className="footer-tagline">
-              Trusted healthcare provider in Chennai for over 15 years. Committed to your health and wellbeing.
+              Trusted healthcare provider in Visakhapatnam for over 5+ years. Committed to your health and wellbeing.
             </p>
           </div>
 
           <div className="footer-column">
             <h4>Quick Links</h4>
             <ul>
-              <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('#about') }}>About Dr. Priya</a></li>
+              <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('#about') }}>About Dr. Dasaradha Ram</a></li>
               <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('#services') }}>Services</a></li>
               <li><a href="#qualification" onClick={(e) => { e.preventDefault(); scrollToSection('#qualification') }}>Qualifications</a></li>
               <li><a href="#testimonials" onClick={(e) => { e.preventDefault(); scrollToSection('#testimonials') }}>Patient Reviews</a></li>
@@ -51,22 +50,22 @@ const Footer = () => {
             <h4>Contact</h4>
             <div className="footer-contact-item">
               <MapPin size={18} />
-              <span>123, TTK Road, Alwarpet, Chennai - 600018</span>
+              <span>PM PALEM, MADHURAWADA, VISHAKAPATNAM</span>
             </div>
             <div className="footer-contact-item">
               <Phone size={18} />
-              <span>+91 98765 43210</span>
+              <span>+91 9966990335</span>
             </div>
             <div className="footer-contact-item">
               <Mail size={18} />
-              <span>dr.priya@healthcare.com</span>
+              <span>dr.dasaradharam@gmail.com</span>
             </div>
           </div>
         </div>
 
         <div className="footer-bottom">
           <div className="footer-copyright">
-            <p>&copy; 2025 Dr. Priya Ramachandran. All rights reserved.</p>
+            <p>&copy; 2025 Dr. Dasaradha Ram Barla. All rights reserved.</p>
           </div>
 
           <div className="footer-social">

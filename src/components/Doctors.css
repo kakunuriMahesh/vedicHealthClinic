@@ -21,12 +21,12 @@
 .doctor-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-xl);
-  border-color: var(--primary-blue);
+  border-color: var(--secondary-purple);
 }
 
 .doctor-image {
   position: relative;
-  height: 350px;
+  height: 550px;
   overflow: hidden;
 }
 
@@ -40,7 +40,7 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: var(--primary-blue);
+  background: var(--secondary-purple);
   color: white;
   padding: 0.5rem 0.75rem;
   border-radius: 1rem;
@@ -64,7 +64,7 @@
 
 .doctor-specialty {
   font-size: 1rem;
-  color: var(--primary-blue);
+  color: var(--primary-purple);
   font-weight: 600;
   margin-bottom: 0.75rem;
 }
@@ -91,7 +91,7 @@
 }
 
 .detail-item svg {
-  color: var(--primary-blue);
+  color: var(--secondary-purple);
 }
 
 /* Mobile styles */
@@ -106,7 +106,8 @@
   }
 
   .doctor-image {
-    height: 250px;
+    height: 550px;
+    width: 400px;
   }
 
   .doctor-content {
@@ -120,6 +121,7 @@
   }
 
   .doctor-image {
-    height: 200px;
+    height: 400px;
+    width: 300px;
   }
 }

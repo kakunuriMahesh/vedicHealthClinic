@@ -33,14 +33,14 @@
 }
 
 .tab-button:hover {
-  border-color: var(--primary-blue);
-  color: var(--primary-blue);
+  border-color: var(--secondary-purple);
+  color: var(--secondary-purple);
   transform: translateY(-2px);
 }
 
 .tab-button.active {
-  background: var(--primary-blue);
-  border-color: var(--primary-blue);
+  background: var(--secondary-purple);
+  border-color: var(--secondary-purple);
   color: white;
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
@@ -110,7 +110,7 @@
 }
 
 .content-features .feature-item svg {
-  color: var(--primary-blue);
+  color: var(--secondary-purple);
   flex-shrink: 0;
 }
 

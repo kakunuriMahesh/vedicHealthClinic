@@ -17,28 +17,25 @@ const About = () => {
     <section id="about" className="about">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">About Dr. Priya</h2>
+          <h2 className="section-title">About Dr. Dasaradha Ram</h2>
           <p className="section-subtitle">
-            Dedicated to serving the Chennai community with excellence in medical care
+            Dedicated to excellence in medical care.
           </p>
         </div>
         <div className="about-content">
           <div className="about-text">
             <p className="about-paragraph">
-              Dr. Priya Ramachandran is a highly respected General Physician with over 15 years of clinical experience. She completed her MBBS from Madras Medical College and pursued her MD in General Medicine from AIIMS, New Delhi.
+              Our medical practice in Visakhapatnam specializes in General Medicine, with a focus on comprehensive health management. We offer a range of services, including treatment for diabetes, hypertension, thyroid disorders, and personalized care aimed at improving overall health and well-being. Catering primarily to patients aged 40 and above.
             </p>
             <p className="about-paragraph">
-              Known for her compassionate approach and thorough diagnosis, Dr. Priya has become a trusted healthcare provider for families across Chennai. She believes in preventive medicine and educating patients about their health conditions.
-            </p>
-            <p className="about-paragraph">
-              Fluent in Tamil, English, and Hindi, Dr. Priya ensures clear communication with all her patients. She regularly participates in medical camps and community health programs, especially focusing on diabetes and hypertension management.
+              Our team of experienced doctors and healthcare professionals is dedicated to providing the highest quality of care to our patients. We are committed to helping our patients achieve and maintain optimal health and well-being.
             </p>
           </div>
           
           <div className="about-image">
             <img 
               src="/assets/img/IMG-20240923-WA0002-removebg-preview.png" 
-              alt="Dr. Priya Ramachandran" 
+              alt="Dr. Dasaradha Ram Barla" 
               className="clinic-image"
             />
           </div>

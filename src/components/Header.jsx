@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Phone, Menu, X, Moon, Sun } from "lucide-react";
 import "./Header.css";
-
+import logo from "../../public/assets/img/LOGO.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -129,14 +129,15 @@ const Header = () => {
             {/* Main navigation */}
             <nav className="header-main">
               <Link to="/" className="logo" onClick={() => setIsMenuOpen(false)}>
-                <div className="logo-icon">
+                {/* <div className="logo-icon">
                   <span>DR</span>
                 </div>
                 <div className="logo-text">
-                  <span className="logo-name">Dr. Priya</span>
-                  <span className="logo-surname">Ramachandran</span>
+                  <span className="logo-name">Dr. Dasaradha Ram</span>
+                  <span className="logo-surname">Barla</span>
                   <span className="logo-title">General Physician, Chennai</span>
-                </div>
+                </div> */}
+                <img src={logo} alt="logo" className="logo-img" style={{ height: "55px", width: "auto" }} />
               </Link>
 
 
@@ -177,6 +178,13 @@ const Header = () => {
                   ))}
                 </ul>
                 <div className="header-cta">
+                <button
+                    className="theme-toggle"
+                    onClick={toggleTheme}
+                    title="Toggle theme"
+                  >
+                    {isDarkMode ? <Moon size={20} /> : <Sun size={20} />}
+                  </button>
                   <button 
                     className="btn btn-primary appointment-btn"
                     onClick={(e) => {
@@ -189,13 +197,6 @@ const Header = () => {
                   >
                     <Phone size={18} />
                     Book Now
-                  </button>
-                  <button
-                    className="theme-toggle"
-                    onClick={toggleTheme}
-                    title="Toggle theme"
-                  >
-                    {isDarkMode ? <Moon size={20} /> : <Sun size={20} />}
                   </button>
                 </div>
 

@@ -8,7 +8,7 @@ const Testimonials = () => {
       id: 1,
       name: 'Rajesh Kumar',
       location: 'T. Nagar, Chennai',
-      text: 'Dr. Priya has been managing my diabetes for 3 years now. Her personalized care and regular follow-ups have helped me maintain excellent blood sugar levels. She takes time to explain everything in Tamil, which I appreciate.',
+      text: 'Dr. Dasaradha Ram has been managing my diabetes for 3 years now. Her personalized care and regular follow-ups have helped me maintain excellent blood sugar levels. She takes time to explain everything in Tamil, which I appreciate.',
       rating: 5
     },
     {
@@ -22,7 +22,7 @@ const Testimonials = () => {
       id: 3,
       name: 'Venkatesh Iyer',
       location: 'Velachery, Chennai',
-      text: 'Dr. Priya treats our entire family. She\'s excellent with children and elderly parents alike. Always available for emergencies and provides thorough consultation.',
+      text: 'Dr. Dasaradha Ram treats our entire family. She\'s excellent with children and elderly parents alike. Always available for emergencies and provides thorough consultation.',
       rating: 5
     }
   ]

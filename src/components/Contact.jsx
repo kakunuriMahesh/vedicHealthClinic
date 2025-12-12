@@ -163,23 +163,29 @@ const Contact = () => {
               </div>
               <h4 className="contact-card-title">Clinic Address</h4>
               <div className="contact-card-content">
-                <p>Dr. Priya's Clinic</p>
-                <p>123, TTK Road, Alwarpet</p>
-                <p>Chennai - 600018, Tamil Nadu</p>
+                <p>Dr. Dasaradha Ram's Clinic</p>
+                <p>PM PALEM, MADHURAWADA, VISHAKAPATNAM</p>
+                <p>Andhra Pradesh, India</p>
               </div>
             </div>
-
             <div className="contact-info-card">
               <div className="contact-card-icon">
                 <Phone size={24} />
               </div>
               <h4 className="contact-card-title">Phone</h4>
               <div className="contact-card-content">
-                <p>+91 98765 43210</p>
-                <p>+91 44 2345 6789</p>
-                <p>Emergency: +91 98765 00000</p>
+                <a href="https://vedichealthclinic.com/tel:+91%2090809%2088450" style={{color: 'gray', textDecoration: 'none'}}>+91 9966990335</a>
               </div>
             </div>
+            {/* <div className="contact-info-card">
+              <div className="contact-card-icon">
+                <MessageCircle size={24} />
+              </div>
+              <h4 className="contact-card-title">WhatsApp</h4>
+              <div className="contact-card-content">
+                <a href="https://api.whatsapp.com/send?phone=9966990335&text=Hello,%20more%20information!" style={{color: 'gray', textDecoration: 'none'}}>+91 9966990335</a>
+              </div>
+            </div> */}
 
             <div className="contact-info-card">
               <div className="contact-card-icon">
@@ -187,8 +193,7 @@ const Contact = () => {
               </div>
               <h4 className="contact-card-title">Email</h4>
               <div className="contact-card-content">
-                <p>dr.priya@healthcare.com</p>
-                <p>appointments@healthcare.com</p>
+                <a href="mailto:dr.dasaradharam@gmail.com" style={{color: 'gray', textDecoration: 'none'}}>dr.dasaradharam@gmail.com</a>
               </div>
             </div>
           </div>

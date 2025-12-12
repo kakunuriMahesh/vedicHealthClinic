@@ -45,7 +45,19 @@ const Services = () => {
       title: 'Infectious Disease Care',
       description: 'Treatment of fever, viral infections, and seasonal illnesses',
       tags: ['Fever', 'Viral Care']
-    }
+    },
+    {
+      icon: <Brain size={32} />,
+      title: 'Neurological Problems',
+      description: 'Treatment of neurological problems like migraine, epilepsy, and other brain related disorders',
+      tags: ['Migraine', 'Epilepsy', 'Brain Disorders']
+    },
+    {
+      icon: <Stethoscope size={32} />,
+      title: 'Indigestion',
+      description: 'Treatment of indigestion and other digestive problems',
+      tags: ['Indigestion', 'Digestive Problems']
+    },
   ]
 
   const specialFocus = [

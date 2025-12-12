@@ -22,17 +22,17 @@ const Hero = () => {
           <div className="hero-content">
             <div className="hero-text">
               <div className="hero-badge">
-                <span>Trusted Healthcare in Chennai</span>
+                <span>Trusted Healthcare in Visakhapatnam</span>
               </div>
               
               <h1 className="hero-title">
-                Dr. Priya Ramachandran
+                Dr. Dasaradha Ram Barla
               </h1>
               
               <p className="hero-qualifications">MBBS, MD (General Medicine)</p>
               
               <p className="hero-description">
-                Providing compassionate and comprehensive healthcare services to the people of Chennai for over 15 years. Specialized in preventive care, chronic disease management, and family medicine.
+                Providing compassionate and comprehensive healthcare services over 5+ years. Specialized in General Physician & Diabetologist.
               </p>
               
               <div className="hero-actions">
@@ -54,11 +54,11 @@ const Hero = () => {
               
               <div className="hero-stats">
                 <div className="stat-card">
-                  <div className="stat-number">15+</div>
+                  <div className="stat-number">5+</div>
                   <div className="stat-label">Years Experience</div>
                 </div>
                 <div className="stat-card">
-                  <div className="stat-number">10,000+</div>
+                  <div className="stat-number">1,500+</div>
                   <div className="stat-label">Patients Treated</div>
                 </div>
                 <div className="stat-card">
@@ -71,7 +71,7 @@ const Hero = () => {
             <div className="hero-image">
               <img 
                 src="/assets/img/IMG-20240923-WA0002-removebg-preview.png" 
-                alt="Dr. Priya Ramachandran" 
+                alt="Dr. Dasaradha Ram Barla" 
                 className="doctor-image"
               />
               <div className="availability-card">
