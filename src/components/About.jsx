@@ -22,6 +22,7 @@ const About = () => {
             Dedicated to excellence in medical care.
           </p>
         </div>
+        <img src='/assets/img/CARD.png' alt='Card' className='card-image' style={{width: '100%', height: '20%', borderRadius: '10px', marginBottom: '20px'}}/>
         <div className="about-content">
           <div className="about-text">
             <p className="about-paragraph">
@@ -34,7 +35,7 @@ const About = () => {
           
           <div className="about-image">
             <img 
-              src="/assets/img/IMG-20240923-WA0002-removebg-preview.png" 
+              src="../../public/assets/img/Clinic.png" 
               alt="Dr. Dasaradha Ram Barla" 
               className="clinic-image"
             />

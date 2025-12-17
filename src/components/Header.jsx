@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Phone, Menu, X, Moon, Sun } from "lucide-react";
 import "./Header.css";
 import logo from "../../public/assets/img/LOGO.png";
@@ -8,10 +8,37 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
-  // Scroll to top instantly when route changes
+  // Handle hash scrolling after navigation to home page
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (location.pathname === '/') {
+      // Check sessionStorage for pending hash scroll
+      const pendingHash = sessionStorage.getItem('pendingHash');
+      if (pendingHash) {
+        sessionStorage.removeItem('pendingHash');
+        setTimeout(() => {
+          const element = document.querySelector(pendingHash);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 200);
+      } else {
+        // Check if there's a hash in the URL
+        const hash = window.location.hash;
+        if (hash) {
+          setTimeout(() => {
+            const element = document.querySelector(hash);
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
+          }, 200);
+        }
+      }
+    } else {
+      // Scroll to top when leaving home page
+      window.scrollTo(0, 0);
+    }
   }, [location.pathname]);
 
   useEffect(() => {
@@ -57,6 +84,7 @@ const Header = () => {
     { name: "Service", href: "#services", scroll: true },
     { name: "Qualification", href: "#qualification", scroll: true },
     { name: "Testimonial", href: "#testimonials", scroll: true },
+    { name: "Articles", href: "/articles", scroll: false },
     { name: "Contact", href: "#contact", scroll: true },
   ];
 
@@ -64,9 +92,17 @@ const Header = () => {
     setIsMenuOpen(false);
     if (scroll && href.startsWith('#')) {
       e?.preventDefault();
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+      
+      // If we're on the home page, scroll to the section
+      if (location.pathname === '/') {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        // If we're on a different page, store hash and navigate to home
+        sessionStorage.setItem('pendingHash', href);
+        navigate('/');
       }
     }
   };

@@ -10,6 +10,8 @@ import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
 import Doctors from './components/Doctors'
 import Departments from './components/Departments'
+import Articles from './components/Articles'
+import ArticleDetail from './components/ArticleDetail'
 import Footer from './components/Footer'
 import './App.css'
 
@@ -70,6 +72,16 @@ function App() {
               <>
                 <Departments />
                 <Contact />
+              </>
+            } />
+            <Route path="/articles" element={
+              <>
+                <Articles />
+              </>
+            } />
+            <Route path="/articles/:id" element={
+              <>
+                <ArticleDetail />
               </>
             } />
           </Routes>

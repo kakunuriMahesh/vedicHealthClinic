@@ -8,21 +8,21 @@ const Testimonials = () => {
       id: 1,
       name: 'Rajesh Kumar',
       location: 'T. Nagar, Chennai',
-      text: 'Dr. Dasaradha Ram has been managing my diabetes for 3 years now. Her personalized care and regular follow-ups have helped me maintain excellent blood sugar levels. She takes time to explain everything in Tamil, which I appreciate.',
+      text: 'Dr. Dasaradha Ram has been managing my diabetes for 3 years now. His personalized care and regular follow-ups have helped me maintain excellent blood sugar levels. He takes time to explain everything in Tamil, which I appreciate.',
       rating: 5
     },
     {
       id: 2,
       name: 'Lakshmi Sundaram',
       location: 'Adyar, Chennai',
-      text: 'Very compassionate and knowledgeable doctor. She diagnosed my thyroid condition when other doctors missed it. Her treatment plan worked perfectly and I\'m feeling much better now.',
+      text: 'Very compassionate and knowledgeable doctor. He diagnosed my thyroid condition when other doctors missed it. His treatment plan worked perfectly and I\'m feeling much better now.',
       rating: 5
     },
     {
       id: 3,
       name: 'Venkatesh Iyer',
       location: 'Velachery, Chennai',
-      text: 'Dr. Dasaradha Ram treats our entire family. She\'s excellent with children and elderly parents alike. Always available for emergencies and provides thorough consultation.',
+      text: 'Dr. Dasaradha Ram treats our entire family. He\'s excellent with children and elderly parents alike. Always available for emergencies and provides thorough consultation.',
       rating: 5
     }
   ]
