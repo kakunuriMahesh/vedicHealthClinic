@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react'
+import { sendEmail } from '../services/emailService'
+import { saveToSheet } from '../services/sheetService'
+
 import './Contact.css'
 
 const Contact = () => {
@@ -21,47 +24,76 @@ const Contact = () => {
     }))
   }
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault()
+  //   setIsSubmitting(true)
+    
+  //   try {
+  //     // Using the same Google Sheets script from your original website
+  //     const scriptURL = "https://script.google.com/macros/s/AKfycbzWritwiQ6I62qK7jEaJZBYx2FwcItAQGxr9QVwJfcKrk2RlTlisTcqF4gs51--bQ/exec"
+      
+  //     const response = await fetch(scriptURL, {
+  //       method: 'POST',
+  //       body: new FormData(e.target)
+  //     })
+
+  //     if (response.ok) {
+  //       setSubmitStatus('success')
+  //       setFormData({
+  //         name: '',
+  //         phone: '',
+  //         email: '',
+  //         message: ''
+  //       })
+        
+  //       // Show success message
+  //       setTimeout(() => {
+  //         setSubmitStatus(null)
+  //       }, 3000)
+  //     } else {
+  //       throw new Error('Form submission failed.')
+  //     }
+  //   } catch (error) {
+  //     console.error('Error:', error)
+  //     setSubmitStatus('error')
+      
+  //     // Show error message
+  //     setTimeout(() => {
+  //       setSubmitStatus(null)
+  //     }, 3000)
+  //   } finally {
+  //     setIsSubmitting(false)
+  //   }
+  // }
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
+  
     try {
-      // Using the same Google Sheets script from your original website
-      const scriptURL = "https://script.google.com/macros/s/AKfycbzWritwiQ6I62qK7jEaJZBYx2FwcItAQGxr9QVwJfcKrk2RlTlisTcqF4gs51--bQ/exec"
-      
-      const response = await fetch(scriptURL, {
-        method: 'POST',
-        body: new FormData(e.target)
+      // 1️⃣ Save to Google Sheet
+      await saveToSheet(e.target)
+  
+      // 2️⃣ Send Email
+      await sendEmail(formData)
+  
+      setSubmitStatus('success')
+      setFormData({
+        name: '',
+        phone: '',
+        email: '',
+        message: ''
       })
-
-      if (response.ok) {
-        setSubmitStatus('success')
-        setFormData({
-          name: '',
-          phone: '',
-          email: '',
-          message: ''
-        })
-        
-        // Show success message
-        setTimeout(() => {
-          setSubmitStatus(null)
-        }, 3000)
-      } else {
-        throw new Error('Form submission failed.')
-      }
+  
+      setTimeout(() => setSubmitStatus(null), 3000)
     } catch (error) {
-      console.error('Error:', error)
+      console.error(error)
       setSubmitStatus('error')
-      
-      // Show error message
-      setTimeout(() => {
-        setSubmitStatus(null)
-      }, 3000)
+      setTimeout(() => setSubmitStatus(null), 3000)
     } finally {
       setIsSubmitting(false)
     }
   }
+  
 
   const handleCallNow = () => {
     window.open('https://wa.me/1800657876?text=Hello, I would like to book an appointment', '_blank')

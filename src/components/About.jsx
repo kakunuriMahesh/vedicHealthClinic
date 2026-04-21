@@ -35,7 +35,7 @@ const About = () => {
           
           <div className="about-image">
             <img 
-              src="../../public/assets/img/Clinic.png" 
+              src="/assets/img/Clinic.png" 
               alt="Dr. Dasaradha Ram Barla" 
               className="clinic-image"
             />

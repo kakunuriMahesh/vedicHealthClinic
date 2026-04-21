@@ -63,15 +63,18 @@ const Services = () => {
   const specialFocus = [
     {
       title: 'Diabetes Management',
-      description: 'Specialized care for Type 1 & 2 diabetes with HbA1c monitoring and lifestyle counseling'
+      description: 'Specialized care for Type 1 & 2 diabetes with HbA1c monitoring and lifestyle counseling',
+      image: '/assets/img/DiabetesManagement.png'
     },
     {
       title: 'Hypertension Control',
-      description: 'Blood pressure management with regular monitoring and personalized treatment plans'
+      description: 'Blood pressure management with regular monitoring and personalized treatment plans',
+      image: '/assets/img/HypertensionControl.png'
     },
     {
       title: 'Geriatric Care',
-      description: 'Compassionate care for elderly patients with multiple health conditions'
+      description: 'Compassionate care for elderly patients with multiple health conditions',
+      image: '/assets/img/GeriatricCare.png'
     }
   ]
 
@@ -107,6 +110,9 @@ const Services = () => {
           <div className="focus-grid">
             {specialFocus.map((focus, idx) => (
               <div key={idx} className="focus-card">
+                <div style={{backgroundColor: 'white', borderRadius: '10px', padding: '10px'}}>
+                  <img src={focus.image} alt={focus.title} style={{width: '100%', objectFit: 'cover', borderRadius: '10px'}} />
+                </div>
                 <h4 className="focus-heading">{focus.title}</h4>
                 <p className="focus-text">{focus.description}</p>
               </div>
